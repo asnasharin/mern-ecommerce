@@ -1,11 +1,17 @@
-import express from "express"
-import { paymentController, sendStripeApiKey } from "../controllers/paymentController.js";
-import { protect } from "../middlewares/authMiddleware.js";
+const express = require("express");
 
-const route = express.Router()
+const {
+  paymentController,
+  sendStripeApiKey,
+} = require("../controllers/paymentController");
 
-route.post("/payment/process", paymentController);
-route.get("/stripeapiKey", sendStripeApiKey)
+const { protect } = require("../middlewares/authMiddleware");
 
+const route = express.Router();
 
-export default route;
+// protect payment route
+route.post("/payment/process", protect, paymentController);
+
+route.get("/stripeapiKey", sendStripeApiKey);
+
+module.exports = route;
