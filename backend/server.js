@@ -1,12 +1,11 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
+const app = require("./app")
 
 const { connectDb } = require("./src/config/mongoConnect");
 
 dotenv.config();
-
-const app = express();
 
 // DB connection
 connectDb();
