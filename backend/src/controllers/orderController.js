@@ -1,57 +1,59 @@
 const asyncHandler = require("express-async-handler");
 const orderModel = require("../models/orderModel");
 const productModel = require("../models/productModel");
-
 exports.createOrder = asyncHandler(async (req, res) => {
-    const {
-        shippingInfo,
-        orderItems,
-        paymentInfo,
-    } = req.body;
+  const { shippingInfo, orderItems, paymentInfo } = req.body;
 
-    if (!orderItems || orderItems.length === 0) {
-        return res.status(400).json({
-            success: false,
-            message: "No order items"
-        });
+  if (!orderItems || orderItems.length === 0) {
+    return res.status(400).json({
+      success: false,
+      message: "No order items",
+    });
+  }
+
+  if (paymentInfo?.status !== "succeeded") {
+    return res.status(400).json({
+      success: false,
+      message: "Payment not completed",
+    });
+  }
+
+  let itemPrice = 0;
+
+  for (let item of orderItems) {
+    const product = await productModel.findById(item.productId);
+
+    if (!product) {
+      return res.status(404).json({
+        success: false,
+        message: "Product not found",
+      });
     }
 
-    let itemPrice = 0;
+    itemPrice += product.price * item.quantity;
+  }
 
-    for (let item of orderItems) {
-        const product = await productModel.findById(item.product);
+  const taxPrice = itemPrice * 0.1;
+  const shippingPrice = itemPrice > 1000 ? 0 : 50;
+  const totalPrice = itemPrice + taxPrice + shippingPrice;
 
-        if (!product) {
-            return res.status(404).json({
-                success: false,
-                message: "Product not found"
-            });
-        }
+  const order = await orderModel.create({
+    shippingInfo,
+    orderItems,
+    paymentInfo,
+    itemPrice,
+    taxPrice,
+    shippingPrice,
+    totalPrice,
+    orderStatus: "Processing",
+    user: req.user._id,
+    paidAt: Date.now(),
+  });
 
-        itemPrice += product.price * item.quantity;
-    }
-
-    const taxPrice = itemPrice * 0.1;
-    const shippingPrice = itemPrice > 1000 ? 0 : 50;
-    const totalPrice = itemPrice + taxPrice + shippingPrice;
-
-    const order = await orderModel.create({
-        shippingInfo,
-        orderItems,
-        paymentInfo,
-        itemPrice,
-        taxPrice,
-        shippingPrice,
-        totalPrice,
-        orderStatus: "Processing",
-        user: req.user._id,
-        paidAt: paymentInfo?.status === "succeeded" ? Date.now() : null,
-    });
-
-    res.status(201).json({
-        success: true,
-        order,
-    });
+  res.status(201).json({
+    success: true,
+    order,
+  });
 });
 
 // get single order
