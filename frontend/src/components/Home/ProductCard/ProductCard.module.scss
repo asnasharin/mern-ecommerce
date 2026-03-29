@@ -1,0 +1,43 @@
+.card {
+  width: 300px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.media {
+  height: 240px;
+  object-fit: cover;
+}
+
+.description {
+  color: #757575;
+  margin-bottom: 6px;
+}
+
+.newPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 14px;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.cardbutton {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100%;
+  height: 45px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #ed1c24 !important;
+    color: black;
+    font-weight: bold;
+  }
+}
