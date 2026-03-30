@@ -1,0 +1,147 @@
+.updateProduct {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .secondBox1 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .formContainer {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .avatar {
+    background-color: #ed1c24;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .heading {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .textField {
+    .MuiOutlinedInput-root {
+      fieldset {
+        border-color: #ddd;
+      }
+  
+      &:hover fieldset {
+        border-color: #aaa;
+      }
+  
+      &.Mui-focused fieldset {
+        border-color: #3f51b5;
+      }
+  
+      .MuiInputAdornment-root {
+        .MuiSvgIcon-root {
+          color: #666;
+        }
+      }
+    }
+  }
+  
+  .formControl {
+    .MuiOutlinedInput-root {
+      fieldset {
+        border-color: #ddd;
+      }
+  
+      &:hover fieldset {
+        border-color: #aaa;
+      }
+  
+      &.Mui-focused fieldset {
+        border-color: #3f51b5;
+      }
+    }
+  
+    .MuiSelect-root {
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+  
+  .select {
+    .MuiSelect-select {
+      padding: 12px;
+    }
+  
+    .MuiSvgIcon-root {
+      color: #666;
+    }
+  }
+  
+  .labelText {
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.875rem;
+  }
+  
+  .imageUpload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  
+    .imgIcon {
+      color: #666;
+    }
+  
+    .uploadButton {
+    background-color: #ed1c24 !important;
+      color: #fff;
+  
+      &:hover {
+        background-color: #ed1c24;
+      }
+    }
+  }
+  
+  .imagePreview {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  
+    .image {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .submitButton {
+    background-color: #ed1c24 !important;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem 0;
+    border-radius: 4px;
+  
+    &:hover {
+    background-color: #ed1c24 !important;
+    }
+  }
+  

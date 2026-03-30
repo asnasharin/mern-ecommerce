@@ -1,0 +1,95 @@
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #fff; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .avatar11 {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #414141;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .name {
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .email {
+    color: #414141;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+    
+  .button {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #292929 !important;
+    color: white !important;
+    width: 70% !important;
+    padding: 0.8rem 2rem !important;
+    margin-bottom: 2rem;
+    border-radius: 4px !important;
+  
+    &:hover {
+      background-color: #ed1c24 !important;
+      color: white !important;
+    }
+  }
+  
+  .sideBarMenu {
+    list-style-type: none;
+    padding: 0.8rem ;
+    margin: 0.5rem 10px;
+    width: 100%;
+  }
+  
+  .sideBarMenuItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 7rem;
+    border-radius: 2px;
+    margin-top: 1.3rem;
+    width: 75%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  
+    &:hover {
+      background-color: #ed1c24;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  
+      svg {
+        color: white;
+      }
+  
+      span {
+        color: white !important;
+      }
+    }
+  
+    svg {
+      color: #414141;
+      font-size: 26px;
+      margin: 0 20px 0;
+    }
+  
+    span {
+      color: #414141;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-left: 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+  }
+ 

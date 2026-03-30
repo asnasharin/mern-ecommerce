@@ -1,0 +1,84 @@
+.secondBox_0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .form {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .avatar {
+    background-color: #f50057;
+    margin-bottom: 1rem;
+  }
+  
+  .heading {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .nameInput {
+    margin-bottom: 1.5rem;
+  }
+  
+  .textField {
+    & .MuiInputBase-root {
+      font-size: 1rem;
+      color: #333;
+    }
+  }
+  
+  .loginButton {
+    background-color: #333 !important;
+    color: white !important;
+    margin-top: 20px !important;
+    font-weight: bold;
+    &:hover {
+      background-color: #999 !important;
+    }
+  }
+  
+  .productListContainer {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .productListHeading {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .productListTable {
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .heading_02 {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #999;
+    margin-top: 2rem;
+  }
+  
