@@ -1,0 +1,19 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 2rem;
+    margin: 0;
+    gap: 1rem;
+}
+
+    .firstbox {
+    width:20%;
+    height: fit-content;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+

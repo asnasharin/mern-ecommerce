@@ -1,0 +1,67 @@
+.productList {
+    display: grid;
+    grid-template-columns: 20% 1fr; 
+    gap: 2rem;
+  
+    .listSidebar {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  
+    .productListContainer {
+      background-color: #ffffff;
+      padding: 1rem;
+      margin: 2rem;
+      overflow-y: auto; 
+      #productListHeading {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+  
+      .productListTable {
+        .MuiDataGrid-root {
+          background-color: #ffffff;
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          font-family: Arial, sans-serif;
+        }
+  
+        .MuiDataGrid-columnHeaders {
+          background-color: #ececec;
+          font-weight: bold;
+          text-align: left;
+        }
+  
+        .column-header {
+          color: #555;
+        }
+  
+        .hide-on-mobile {
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+  
+        .column-header1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ff0000;
+        }
+      }
+    }
+  }
+  
+  .iconbtn {
+    color: #f44336;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 2rem;
+  
+    &:hover {
+      color: #d32f2f;
+    }
+  }
+  
