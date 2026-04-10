@@ -17,7 +17,7 @@ const app = express();
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? ["http://localhost:5173"] 
+      ? ["https://mern-ecommerce-2-n3wv.onrender.com"] 
       : ["http://localhost:5173"],
   credentials: true,
 };
