@@ -1,5 +1,5 @@
 const { Router } = require ("express");
-const { createProductController, createProductReview, deleteProductController, deleteReview, getAllProduct, getAllProductsAdmin, getAllReviews, getProductDetails, updateProduct } = require("../controllers/productController.js");
+const { createProductController, createProductReview, deleteProductController, deleteReview, getAllProduct, getAllProductsAdmin, getAllReviews, getProductDetails, updateProduct } = require("../controllers/productcontroller.js");
 const { isAdmin, protect } = require("../middlewares/authMiddleware.js");
 
 
